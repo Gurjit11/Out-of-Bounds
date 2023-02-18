@@ -6,11 +6,12 @@ import Explore from "./pages/Explore";
 import CreateBlog from "./pages/CreateBlog";
 import LoginAndSignup from "./pages/LoginAndSignup";
 import './App.css'
+import Navbar from "./Components/Navbar";
 
 function App() {
     return(
         <div className="">
-            <Home/>
+            {/* <Navbar/> */}
             <Router>
                 <Routes>
                 <Route exact path="/" element={<Home />} />
@@ -21,6 +22,7 @@ function App() {
                 <Route exact path="/login" element={<LoginAndSignup />} />
                 </Routes>
             </Router>
+            
         </div>
     );
 }

@@ -1,8 +1,9 @@
 import React from 'react'
+import Drafts from './Drafts'
 
 const NewCard = () => {
   return (
-    <div className='w-screen xl:w-5/12 lg:w-8/12'>
+    <div className='w-full '>
         <div className=' m-10 p-10 rounded-md bg-slate-100 shadow hover:drop-shadow-lg shadow-indigo-500/50'>
             <div className='text-xl font-semibold m-1 p-1'>
                 Title
