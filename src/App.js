@@ -5,6 +5,7 @@ import UserProfile from "./pages/UserProfile";
 import Explore from "./pages/Explore";
 import CreateBlog from "./pages/CreateBlog";
 import LoginAndSignup from "./pages/LoginAndSignup";
+import BlogView from "./pages/BlogView";
 import './App.css'
 import Navbar from "./Components/Navbar";
 
@@ -20,6 +21,7 @@ function App() {
                 <Route exact path="/profile" element={<UserProfile />} />
                 <Route exact path="/create" element={<CreateBlog />} />
                 <Route exact path="/login" element={<LoginAndSignup />} />
+                <Route exact path="/blogView" element={<BlogView />} />
                 </Routes>
             </Router>
             
