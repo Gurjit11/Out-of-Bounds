@@ -9,7 +9,7 @@ const Blogcard = () => {
     }
 
     const title = ' title'
-    const description =`A blog is a website or page 
+    const description =`A blog is aqa website or page 
     that is a part of a larger website. Typically
     , it features articles written in a conversational
      style with accompanying`

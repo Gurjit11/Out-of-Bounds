@@ -36,7 +36,7 @@ function CreateBlog({ isAuth }) {
 
   useEffect(() => {
     if (!isAuth) {
-      // navigate("/login");
+       navigate("/login");
     }
   }, []);
 

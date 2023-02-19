@@ -1,51 +1,47 @@
 import React from 'react'
-import { IoClose } from "react-icons/io5";
-import { IoMenu } from "react-icons/io5";
+// import { IoClose } from "react-icons/io5";
+// import { IoMenu } from "react-icons/io5";
+import { FaHome, FaPlusCircle , FaUserCircle} from "react-icons/fa";
+import bloglogo from './outofboundslogo.png';
+import { useNavigate } from 'react-router-dom';
 
 
 function Navbar() {
-  let menuopened = false;
-    const Menu = () =>{
+ const navigate = useNavigate()
 
-    }
+ const handleNavbarButton = () => {
+  navigate('/login')
+ }
+
+
+    
   return (
-    <div>
-      <nav className="p-5 bg-white shadow md:flex md:items-center md:justify-between">
-    <div className="flex justify-between items-center ">
-      <span className="text-2xl font-[Poppins] cursor-pointer">
-        <img className="h-10 inline"
-          src="bloglogo.png"/>
-        tailwind
+    <div className='md:justify-between sticky top-0'>
+      <nav className="p-2 bg-black shadow flex md:items-center justify-between">
+    <div className="flex justify-between items-center ml-3 ">
+      <span className="text-xl font-[Poppins] text-white cursor-pointer block">
+        <img className="h-12 rounded-full" src='https://i.pinimg.com/originals/75/38/8d/75388da785e0a7363325eb11d05a4c1b.jpg' alt="logo"/>
+        
       </span>
-
-      <span className="text-3xl cursor-pointer mx-2 md:hidden block">
-        {/* <ion-icon name="menu" onclick="Menu(this)"></ion-icon> */}
-        {menuopened ? <IoClose onClick={Menu}/>: <IoMenu onClick={Menu}/>}
-      </span>
+    <h5 className='text-white ml-4 text-2xl'>BlogEarth</h5>
     </div>
 
-    <ul className="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
-     style={`${menuopened ? 'top-[80px]' : ""}`}>
-      <li className="mx-4 my-6 md:my-0">
-        <a href="/" className="text-xl hover:text-cyan-500 duration-500">HOME</a>
+    <ul className="flex items-center text-white bg-black  w-auto py-0 pl-0 ">
+      <li className="md:mx-4 md:my-2 mx-2">
+        <a href="/" className="text-2xl active hover:text-cyan-500 duration-500"><FaHome/></a>
       </li>
-      <li className="mx-4 my-6 md:my-0">
-        <a href="/" className="text-xl hover:text-cyan-500 duration-500">SERVICE</a>
+      <li className="md:mx-4 md:my-2 mx-2">
+        <a href="/" className="text-2xl hover:text-cyan-500 duration-500"><FaUserCircle/></a>
       </li>
-      <li className="mx-4 my-6 md:my-0">
-        <a href="/" className="text-xl hover:text-cyan-500 duration-500">ABOUT</a>
+      <li className="md:mx-4 md:my-2 mx-2">
+        <a href="/" className="text-2xl hover:text-cyan-500 duration-500"><FaPlusCircle/></a>
       </li>
-      <li className="mx-4 my-6 md:my-0">
-        <a href="/" className="text-xl hover:text-cyan-500 duration-500">CONTACT</a>
-      </li>
-      <li className="mx-4 my-6 md:my-0">
-        <a href="/" className="text-xl hover:text-cyan-500 duration-500">BLOG'S</a>
-      </li>
-
-      <button className="bg-cyan-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+      <button className="bg-gradient-to-r from-green-400 to-blue-400 text-white font-bold duration-500 px-1 md:px-6 md:py-2 md:mx-4 hover:from-red-400 hover:to-yellow-400 rounded "
+      onClick={handleNavbarButton}>
         Sign Up
       </button>
-      <button className="bg-cyan-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+      <button className="bg-gradient-to-r from-green-400 to-blue-400 text-white font-bold duration-500 px-1 md:px-6 md:py-2 md:mx-4 mx-2 hover:from-red-400 hover:to-yellow-400 rounded "
+      onClick={handleNavbarButton}>
         Log In
       </button>
 
