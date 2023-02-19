@@ -10,6 +10,7 @@ import './App.css'
 import Navbar from "./Components/Navbar";
 import Reset from "./pages/Reset";
 import Register from "./pages/Register";
+import SavedBlogs from "./Components/SavedBlogs";
 
 function App() {
     return(
@@ -26,6 +27,7 @@ function App() {
                 <Route exact path="/blogView" element={<BlogView />} />
                 <Route exact path="/reset" element={<Reset/>} />
                 <Route exact path="/register" element={<Register />} />
+                <Route exact path="/saved" element={<SavedBlogs />} />
                 </Routes>
             </Router>
             
