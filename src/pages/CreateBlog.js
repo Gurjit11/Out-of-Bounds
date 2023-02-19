@@ -31,16 +31,20 @@ function CreateBlog({ isAuth }) {
       postText,
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
     });
-    navigate("/");
+    // navigate("/");
   };
 
   useEffect(() => {
     if (!isAuth) {
-       navigate("/login");
+      //  navigate("/login");
     }
   }, []);
 
   return (
+<div>
+<Navbar/>
+
+
     <div className='grid md:grid-cols-2'>
         <div className=' m-10 p-10 rounded-md bg-slate-100 shadow hover:drop-shadow-lg shadow-indigo-500/50'>
       
@@ -85,6 +89,8 @@ function CreateBlog({ isAuth }) {
 
       <Drafts/>
     </div>
+
+</div>
   );
 }
 

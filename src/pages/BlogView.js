@@ -1,7 +1,7 @@
 import React from 'react'
 
 const BlogView = () => {
-    const title = ' title'
+    const title = 'Blog Importance'
     const description =`1. Listicles
     Everybody loves a list. They’re easy to scan, have digestible information and they’re super popular for social media sharing.
     
