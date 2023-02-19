@@ -1,6 +1,4 @@
 import React from 'react'
-// import { IoClose } from "react-icons/io5";
-// import { IoMenu } from "react-icons/io5";
 import { FaHome, FaPlusCircle , FaUserCircle} from "react-icons/fa";
 
 import { useNavigate } from 'react-router-dom';

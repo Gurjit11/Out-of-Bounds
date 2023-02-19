@@ -1,6 +1,4 @@
 import React from 'react'
-// import { IoClose } from "react-icons/io5";
-// import { IoMenu } from "react-icons/io5";
 import { FaHome, FaPlusCircle , FaUserCircle} from "react-icons/fa";
 import { logout } from '../firebase-config';
 import { useNavigate } from 'react-router-dom';
@@ -17,7 +15,7 @@ function Navbar() {
 
     
   return (
-    <div className='md:justify-between sticky top-0 z-10'>
+    <div className='md:justify-between sticky top-0 z-100'>
       <nav className="p-2 bg-black shadow flex md:items-center justify-between">
     <div className="flex justify-between items-center ml-3 ">
       <span className="text-xl font-[Poppins] text-white cursor-pointer block">

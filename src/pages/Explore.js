@@ -11,7 +11,7 @@ const Explore = () => {
   // 91a2083997364920824011a7cc29d822
 
   const getNews = () => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=9ca54059f2fd4116a58df6f76445d0ff&q=india")
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=84e7ffa4e6b7461db4800fa9eb4af383&q=india")
       .then((response) => {
         setData(response.data.articles)
       })
@@ -96,36 +96,3 @@ const Explore = () => {
 }
 
 export default Explore
-
-
-    // <div>
-    //   <div className='mt-4 grid grid-cols-2 '>
-    //     <div className='pl-2 mb-2 md:text-3xl font-bold'>
-    //     <div className='mb-2'>BlogEarth</div>
-    //     <hr></hr>
-    //     <hr></hr>
-    //     <hr></hr>
-    //     <div className='mt-1 mb-1 font-light md:text-lg'> Our earth is
-    //        the only planet that can sustain humans and other
-    //         living species. The vital substances such as air,
-    //          water, and land make it possible.</div>
-    //     <hr></hr>
-    //     <hr></hr>
-    //     <hr></hr>
-    //     <div className='mt-5'>
-    //       Continue Your Journey!
-    //     </div>
-    //     </div>     
-    //     <div className='flex-col justify-center items-center'>
-    //       <div className='flex justify-center items-center'>
-    //     <img className=" rounded-full md:h-[200px] h-[150px]" src='https://i.pinimg.com/originals/75/38/8d/75388da785e0a7363325eb11d05a4c1b.jpg' alt="logo"/>
-    //     </div>
-    //       <div  className='flex justify-center items-center'>
-    //     <button type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 
-    //     font-medium rounded-lg text-sm px-5 py-2.5 text-center
-    //      mr-2 mt-2 mb-2">Donate</button>
-    //       </div>
-    //     </div>
-    //   </div>
-
-    //   <hr></hr>

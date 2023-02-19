@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../Components/Navbar'
 
 const BlogView = () => {
     const title = 'Blog Importance'
@@ -83,6 +84,7 @@ const BlogView = () => {
 
   return (
     <div>
+      <Navbar/>
         <div className='font-bold text-2xl text-center'>
             {title}
         </div>
