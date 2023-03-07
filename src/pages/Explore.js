@@ -11,7 +11,7 @@ const Explore = () => {
   // 91a2083997364920824011a7cc29d822
 
   const getNews = () => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=84e7ffa4e6b7461db4800fa9eb4af383&q=india")
+    axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=d52f3e1807254bfd92e7864bd5ebc177")
       .then((response) => {
         setData(response.data.articles)
       })
@@ -20,7 +20,7 @@ const Explore = () => {
 
   useEffect(() => {
     getNews()
-  })
+  },[])
 
   return (
       <div>
@@ -68,7 +68,7 @@ const Explore = () => {
       style={{backgroundImage: `url('https://media.istockphoto.com/vectors/abstract-square-background-vector-id1153965495?b=1&k=20&m=1153965495&s=170667a&w=0&h=TPpDaNGn5pbeagUw-hNzIZnO6nPwytJdPbwqFsHFObU=')`,
       backgroundSize: 'cover',
     }}>
-      <img className = 'rounded-lg' src = {value.urlToImage}></img>
+      <img className = 'rounded-lg' src = {value.urlToImage} alt='/'></img>
            
         <div className=' bg-white bg-opacity-10 backdrop-blur-lg rounded drop-shadow-lg'>   
             <div className='text-xl font-semibold m-1 p-1'>
