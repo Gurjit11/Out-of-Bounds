@@ -21,13 +21,14 @@ import {
   addDoc,
 } from "firebase/firestore";
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDLkl3lYoys3HRUZIZZRR3FVuVGeiaVmAE",
-  authDomain: "blog-13b2c.firebaseapp.com",
-  projectId: "blog-13b2c",
-  storageBucket: "blog-13b2c.appspot.com",
-  messagingSenderId: "553484679768",
-  appId: "1:553484679768:web:d782097c6248d33c88282d"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 // Initialize Firebase

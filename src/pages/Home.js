@@ -12,7 +12,7 @@ const Home = () => {
   
   useEffect(() => {
     const getNews = () => {
-      axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=d52f3e1807254bfd92e7864bd5ebc177")
+      axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_KEY_NEWS}`)
         .then((response) => {
           setData(response.data.articles)
         })

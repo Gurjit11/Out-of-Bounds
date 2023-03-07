@@ -11,7 +11,7 @@ const Explore = () => {
   // 91a2083997364920824011a7cc29d822
 
   const getNews = () => {
-    axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=d52f3e1807254bfd92e7864bd5ebc177")
+    axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_KEY_NEWS}`)
       .then((response) => {
         setData(response.data.articles)
       })
@@ -47,7 +47,7 @@ const Explore = () => {
         <img className=" rounded-full md:h-[200px] h-[150px]" src='https://i.pinimg.com/originals/75/38/8d/75388da785e0a7363325eb11d05a4c1b.jpg' alt="logo"/>
         </div>
           <div  className='flex justify-center items-center'>
-        <button type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 
+        <button type="button" className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 
         font-medium rounded-lg text-sm px-5 py-2.5 text-center
          mr-2 mt-2 mb-2"
          onClick={() => {window.location.replace('https://www.earthday.org/india/')}}
