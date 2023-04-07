@@ -14,7 +14,7 @@ function HomeNavbar() {
 
     
   return (
-    <div className='md:justify-between sticky top-0 z-100'>
+    <div className='md:justify-between sticky top-0 z-10'>
       <nav className="p-2 bg-black shadow flex md:items-center justify-between">
     <div className="flex justify-between items-center ml-3 ">
       <span className="text-xl font-[Poppins] text-white cursor-pointer block">

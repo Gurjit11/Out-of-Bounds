@@ -22,10 +22,20 @@ function CreateBlog({ isAuth }) {
 
   let navigate = useNavigate();
   const createPost = async () => {
-  await addDoc(postsCollectionRef, {
+
+    // const imageRef = ref(storage, `images/${uuidv4}`);
+
+    // await uploadBytes(imageRef,image);
+
+    // const imageUrl = await getDownloadURL(imageRef);
+    // Choose the collection to write to based on the isDraft parameter
+    await addDoc(postsCollectionRef, {
       title,
       desciption,
       postText,
+      likes:0,
+      likedBy:[],
+      // imageUrl: imageUrl,
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
     });
     alert('Blog posted');
@@ -33,19 +43,29 @@ function CreateBlog({ isAuth }) {
   };
   
   const createdraft = async () => {
-     await addDoc(draftsCollectionRef, {
+    // const imageRef = ref(storage, `images/${uuidv4}`);
+
+    // await uploadBytes(imageRef,image);
+
+    // const imageUrl = await getDownloadURL(imageRef);
+    // Choose the collection to write to based on the isDraft parameter
+    await addDoc(draftsCollectionRef, {
       title,
       desciption,
       postText,
+      likes:0,
+      likedBy:[],
+      // imageUrl: imageUrl,
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
     });
     alert('Content saved in draft');
-    navigate("/saved");
+    // navigate("/saved");
   };
   
   
     useEffect(() => {
       if (!isAuth) {
+        // navigate("/login");
       }
     }, []);
   
@@ -64,6 +84,7 @@ function CreateBlog({ isAuth }) {
               className='w-auto ring ring-offset-2 ring-blue-400  hover:ring-green-400 outline-none rounded-sm m-1 p-1 '
               onChange={(event) => {
                 setTitle(event.target.value);
+                // console.log(event.target.value);
               }}/>
   
               <div className='text-xl font-semibold m-1 p-1'>
@@ -88,7 +109,16 @@ function CreateBlog({ isAuth }) {
               placeholder='Enter Content'
               className='ring ring-offset-2 ring-blue-400  hover:ring-green-400 outline-none rounded-sm m-1 p-1 w-full'
               />
-            
+              {/* <div>
+            <div className='border-black border-2 mt-5 rounded-xl'>
+              <div className='text-lg font-semibold m-1 p-1'>
+              Image: 
+              </div>
+              {image && (
+          <img src={image} alt="Blog image" width="200" />
+        )} </div>
+            <input type="file" onChange={(event)=> setImage(event.target.files[0])} />
+          </div> */}
           <div className='text-xl font-semibold'>
           <button onClick={createPost}
               type="button" className="bg-gradient-to-r from-green-400 to-blue-400 hover:from-red-400 hover:to-yellow-400 text-white p-2 rounded-md m-2 mt-5 pl-4 pr-4">
@@ -100,8 +130,9 @@ function CreateBlog({ isAuth }) {
           </button>
           </div>
         </div>
-  
-        <Drafts/>
+        <div >
+          <SavedBlogs/>
+        </div>
       </div>
       </div>
     );

@@ -10,11 +10,14 @@ import './App.css'
 import Navbar from "./Components/Navbar";
 import Reset from "./pages/Reset";
 import Register from "./pages/Register";
+import SavedBlogs from "./Components/SavedBlogs";
+import Mypost from "./pages/Mypost";
 
 function App() {
     return(
         <div className="">
             <Router>
+            {/* <Navbar/> */}
                 <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/admin" element={<Admin />} />
@@ -25,6 +28,8 @@ function App() {
                 <Route exact path="/blogView" element={<BlogView />} />
                 <Route exact path="/reset" element={<Reset/>} />
                 <Route exact path="/register" element={<Register />} />
+                <Route exact path="/saved" element={<SavedBlogs />} />
+                <Route exact path="/mypost" element={<Mypost />} />
                 </Routes>
             </Router>
             
