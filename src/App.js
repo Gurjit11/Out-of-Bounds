@@ -12,10 +12,11 @@ import Reset from "./pages/Reset";
 import Register from "./pages/Register";
 import SavedBlogs from "./Components/SavedBlogs";
 import Mypost from "./pages/Mypost";
+import Footer from "./Components/Footer";
 
 function App() {
     return(
-        <div className="">
+        <div className="overflow-x-hidden">
             <Router>
             {/* <Navbar/> */}
                 <Routes>
@@ -31,6 +32,7 @@ function App() {
                 <Route exact path="/saved" element={<SavedBlogs />} />
                 <Route exact path="/mypost" element={<Mypost />} />
                 </Routes>
+                <Footer/>
             </Router>
             
         </div>

@@ -8,6 +8,10 @@ const UserProfile = () => {
     <div>
       
       UserProfile
+    <span className='font-bold text-xl'>
+
+      Under Development
+    </span>
     </div>
     </div>
   )
